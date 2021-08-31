@@ -32,6 +32,7 @@ public @interface Magic {
 
 <pre>
 <code>
+@AutoService(Processor.class)
 public class MagicMojaProcessor extends AbstractProcessor {  //AbstractProcessor을 상속받는다. 
 
 @Override
