@@ -30,8 +30,7 @@ public @interface Magic {
 </code>
 </pre>
 
-<pre>
-<code>
+```java
 @AutoService(Processor.class)
 public class MagicMojaProcessor extends AbstractProcessor {  //AbstractProcessor을 상속받는다. 
 
@@ -85,8 +84,7 @@ public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment 
         return true; // true 를 리턴하면 이 애노테이션 타입을 처리 한 것이다. 그래서 다음 프로세서들 한테 더이상 이 애노테이션을 처리하라고 부탁하지 않는다. 경우에 따라서 다른곳에서도 처리할것 같으면 false 를 처리한다. 
 }
 }
-</code>
-</pre>
+```
 
 jar 패키징을 하려면 resource 를 등록하는 등 상당히 번거로운데 그것을 도와주는 자동으로 컴파일하주는 AutoServices 를 사용하면 된다.    
 클래스 위에 @AutoService(Processor.class) 를 적으면 
